@@ -7,3 +7,110 @@
   font-size: 2em;
   text-align: center;
 }
+
+.mobile-view {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .mobile-view {
+    display: block;
+  }
+}
+
+.mobile-view img {
+  margin: 0;
+}
+.right-mobile {
+  width: 100vw;
+}
+.top-left-mobile {
+  width: 100vw;
+}
+.bottom-left-mobile {
+  width: 50vw;
+}
+.bottom-right-mobile {
+  width: 50vw;
+}
+.JumboGrid {
+  box-sizing: border-box;
+  margin: auto;
+}
+.JumboGrid .jumbo-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-areas: "item-1 item-1 item-2 item-2" "item-3 item-4 item-2 item-2";
+  grid-template-rows: 28vh 32vh;
+}
+@media (max-width: 1024px) {
+  .JumboGrid .jumbo-container {
+    display: none;
+  }
+}
+.JumboGrid .jumbo-image-wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.JumboGrid .jumbo-image-wrapper img {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  transition: all 8s;
+  object-fit: stretch;
+}
+.JumboGrid .jumbo-image-wrapper img:hover {
+  transform: scale(1.2);
+}
+.JumboGrid .jumbo-item1 {
+  grid-area: item-1;
+  object-fit: stretch;
+}
+@media (max-width: 1024px) {
+  .JumboGrid .jumbo-item1 {
+    display: hidden;
+  }
+}
+.JumboGrid .jumbo-item1 .jumbo-image-wrapper img {
+  height: 100%;
+  width: 100%;
+}
+.JumboGrid .jumbo-item2 {
+  grid-area: item-2;
+  object-fit: stretch;
+}
+.JumboGrid .jumbo-item2 .jumbo-image-wrapper img {
+  height: 100%;
+  width: 100%;
+}
+.JumboGrid .jumbo-item3 {
+  grid-area: item-3;
+  object-fit: stretch;
+}
+@media (max-width: 1024px) {
+  .JumboGrid .jumbo-item3 {
+    display: hidden;
+  }
+}
+.JumboGrid .jumbo-item3 .jumbo-image-wrapper img {
+  height: 100%;
+  width: 100%;
+}
+.JumboGrid .jumbo-item4 {
+  grid-area: item-4;
+  object-fit: stretch;
+}
+@media (max-width: 1024px) {
+  .JumboGrid .jumbo-item4 {
+    display: hidden;
+  }
+}
+.JumboGrid .jumbo-item4 .jumbo-image-wrapper img {
+  height: 100%;
+  width: 100%;
+}
+.JumboGrid .jumbo-item {
+  align-items: stretch;
+  overflow: hidden;
+}

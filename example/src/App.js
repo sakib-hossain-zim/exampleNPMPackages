@@ -1,10 +1,26 @@
 import React from 'react'
 
-import { ExampleComponent } from 'jumbo-grid'
+import { JumboGrid } from 'jumbo-grid'
 import 'jumbo-grid/dist/index.css'
+import axios from "axios"
+import { Layout} from "antd";
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+
+  const getAd = async (type, page) => {
+    console.log(type);
+    console.log(page);
+  };
+
+  return (
+  <Layout>
+    <Layout.Content>
+      <div>
+        <JumboGrid  getAd={getAd} page={"home"} />
+      </div>
+    </Layout.Content>
+  </Layout>
+  )
 }
 
 export default App
