@@ -51,6 +51,26 @@ export const JumboGrid = ({ getAd, url, page }) => {
   ] = FetchInfo();
 
 
+  if (error)
+    return message.error(
+      "Oops ... Something went wrong, we could not load the information for this search"
+    );
+
+  let result = null;
+  if (loading) {
+    return (
+      <div
+        style={{
+          position: "absolute",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      >
+        <small>Loading ... </small>
+        <Spin />
+      </div>
+    );
+  } else {
     return (
       <div>
         <div className="mobile-view">
@@ -86,4 +106,5 @@ export const JumboGrid = ({ getAd, url, page }) => {
         </div>
       </div>
     );
+  }
 }
